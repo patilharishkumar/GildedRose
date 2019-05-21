@@ -1,14 +1,13 @@
-package com.github.harish.gildedrose.factories;
+package com.circleci.harish.gildedrose.factories;
 
-import com.github.harish.gildedrose.strategies.*;
-import com.github.vedenin.gildedrose.strategies.*;
+import com.circleci.harish.gildedrose.strategies.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.github.harish.gildedrose.Constants.AGED_BRIE;
-import static com.github.harish.gildedrose.Constants.BACKSTAGE;
-import static com.github.harish.gildedrose.Constants.CONJURED;
+import static com.circleci.harish.gildedrose.Constants.AGED_BRIE;
+import static com.circleci.harish.gildedrose.Constants.BACKSTAGE;
+import static com.circleci.harish.gildedrose.Constants.CONJURED;
 
 /**
  * pattern Factory

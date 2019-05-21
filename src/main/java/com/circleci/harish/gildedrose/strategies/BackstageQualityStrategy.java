@@ -1,4 +1,4 @@
-package com.github.harish.gildedrose.strategies;
+package com.circleci.harish.gildedrose.strategies;
 
 /**
  * "Backstage passes", like aged brie, increases in Quality as its SellIn value approaches;

@@ -1,8 +1,8 @@
-package com.github.harish.gildedrose;
+package com.circleci.harish.gildedrose;
 
-import com.github.harish.gildedrose.factories.DefaultQualityStrategyFactory;
-import com.github.harish.gildedrose.factories.QualityStrategyFactory;
-import com.github.harish.gildedrose.strategies.QualityStrategy;
+import com.circleci.harish.gildedrose.factories.DefaultQualityStrategyFactory;
+import com.circleci.harish.gildedrose.factories.QualityStrategyFactory;
+import com.circleci.harish.gildedrose.strategies.QualityStrategy;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.github.harish.gildedrose;
+package com.circleci.harish.gildedrose;
 
-import com.github.harish.gildedrose.oldversion.GildedRoseOld;
+import com.circleci.harish.gildedrose.oldversion.GildedRoseOld;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package com.github.harish.gildedrose.factories;
+package com.circleci.harish.gildedrose.factories;
 
-import com.github.harish.gildedrose.strategies.QualityStrategy;
+import com.circleci.harish.gildedrose.strategies.QualityStrategy;
 
 /**
  * pattern Factory

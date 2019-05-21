@@ -1,3 +1,8 @@
+TO build
+mvn clean install
+
+To
+
 ======================================
 Gilded Rose Requirements Specification
 ======================================

@@ -1,4 +1,4 @@
-package com.github.harish.gildedrose.strategies;
+package com.circleci.harish.gildedrose.strategies;
 
 /**
  * "Aged Brie" actually increases in Quality the older it gets

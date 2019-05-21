@@ -1,18 +1,18 @@
-package com.github.harish.gildedrose;
+package com.circleci.harish.gildedrose;
 
-import com.github.harish.gildedrose.oldversion.GildedRoseOld;
+import com.circleci.harish.gildedrose.oldversion.GildedRoseOld;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class CommonItemTest {
+public class SulfurasTest {
     private static final int INIT_SELL_IN = 11;
-    private static final int INIT_QUALITY = 50;
-    private static final int MAX_DAYS = 35;
+    private static final int INIT_QUALITY = 80;
+    private static final int MAX_DAYS = 30;
 
     @Test
     public void updateQualityNewVersionTest() {
         Item[] items = new Item[1];
-        items[0] = new Item("Other item", INIT_SELL_IN, INIT_QUALITY);
+        items[0] = new Item(Constants.SULFURAS, INIT_SELL_IN, INIT_QUALITY);
         GildedRoseInterface gildedRose = new GildedRose(items);
 
         int[] result = getResult();
@@ -24,7 +24,7 @@ public class CommonItemTest {
     @Test
     public void updateQualityOldVersionTest() {
         Item[] items = new Item[1];
-        items[0] = new Item("Other item", INIT_SELL_IN, INIT_QUALITY);
+        items[0] = new Item(Constants.SULFURAS, INIT_SELL_IN, INIT_QUALITY);
         GildedRoseInterface gildedRose = new GildedRoseOld(items);
 
         int[] result = getResult();
@@ -35,12 +35,8 @@ public class CommonItemTest {
 
     private int[] getResult() {
         int[] result = new int[MAX_DAYS];
-        int days = 0;
-        for (; days < 11; days++) {
-            result[days] = INIT_QUALITY - (days + 1);
-        }
-        for (; days < 30; days++) {
-            result[days] = INIT_QUALITY - (days + 1) * 2 + 11;
+        for (int days = 0; days < MAX_DAYS; days++) {
+            result[days] = INIT_QUALITY;
         }
         return result;
     }
@@ -49,15 +45,15 @@ public class CommonItemTest {
         gildedRose.updateQuality();
 
         checkQuality(items, result[days], days);
-        checkSellIIn(items, INIT_SELL_IN - days - 1, days);
+        checkSellIIn(items, days);
     }
 
     private static void checkQuality(Item[] items, int result, int days) {
         Assert.assertEquals("Quality isn't equals in " + days + " days:", result, items[0].quality);
     }
 
-    private static void checkSellIIn(Item[] items, int sellIn, int days) {
-        Assert.assertEquals("SellIIn isn't equals in " + days + " days:", sellIn, items[0].sellIn);
+    private static void checkSellIIn(Item[] items, int days) {
+        Assert.assertEquals("SellIIn isn't equals in " + days + " days:", INIT_SELL_IN, items[0].sellIn);
     }
 
 }

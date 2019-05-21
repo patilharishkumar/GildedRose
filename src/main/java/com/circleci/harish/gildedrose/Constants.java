@@ -1,4 +1,4 @@
-package com.github.harish.gildedrose;
+package com.circleci.harish.gildedrose;
 
 public final class Constants {
     private Constants() {}
