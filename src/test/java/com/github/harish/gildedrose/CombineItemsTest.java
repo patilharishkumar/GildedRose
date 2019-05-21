@@ -1,6 +1,6 @@
-package com.github.vedenin.gildedrose;
+package com.github.harish.gildedrose;
 
-import com.github.vedenin.gildedrose.oldversion.GildedRoseOld;
+import com.github.harish.gildedrose.oldversion.GildedRoseOld;
 import org.junit.Assert;
 import org.junit.Test;
 

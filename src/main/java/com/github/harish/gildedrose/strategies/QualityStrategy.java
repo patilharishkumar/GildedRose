@@ -1,6 +1,6 @@
-package com.github.vedenin.gildedrose.strategies;
+package com.github.harish.gildedrose.strategies;
 
-import com.github.vedenin.gildedrose.factories.QualityStrategyFactory;
+import com.github.harish.gildedrose.factories.QualityStrategyFactory;
 
 /**
  * The Quality of an item is never negative (MIN_QUALITY)

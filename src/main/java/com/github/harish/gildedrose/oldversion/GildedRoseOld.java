@@ -1,7 +1,7 @@
-package com.github.vedenin.gildedrose.oldversion;
+package com.github.harish.gildedrose.oldversion;
 
-import com.github.vedenin.gildedrose.GildedRoseInterface;
-import com.github.vedenin.gildedrose.Item;
+import com.github.harish.gildedrose.GildedRoseInterface;
+import com.github.harish.gildedrose.Item;
 
 public class GildedRoseOld implements GildedRoseInterface {
     Item[] items;

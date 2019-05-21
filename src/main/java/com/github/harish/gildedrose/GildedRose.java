@@ -1,8 +1,8 @@
-package com.github.vedenin.gildedrose;
+package com.github.harish.gildedrose;
 
-import com.github.vedenin.gildedrose.factories.DefaultQualityStrategyFactory;
-import com.github.vedenin.gildedrose.strategies.QualityStrategy;
-import com.github.vedenin.gildedrose.factories.QualityStrategyFactory;
+import com.github.harish.gildedrose.factories.DefaultQualityStrategyFactory;
+import com.github.harish.gildedrose.factories.QualityStrategyFactory;
+import com.github.harish.gildedrose.strategies.QualityStrategy;
 
 import java.util.Arrays;
 import java.util.List;

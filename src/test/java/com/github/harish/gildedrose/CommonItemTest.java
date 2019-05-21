@@ -1,18 +1,18 @@
-package com.github.vedenin.gildedrose;
+package com.github.harish.gildedrose;
 
-import com.github.vedenin.gildedrose.oldversion.GildedRoseOld;
+import com.github.harish.gildedrose.oldversion.GildedRoseOld;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class BackstageTest {
+public class CommonItemTest {
     private static final int INIT_SELL_IN = 11;
-    private static final int INIT_QUALITY = 30;
-    private static final int MAX_DAYS = 30;
+    private static final int INIT_QUALITY = 50;
+    private static final int MAX_DAYS = 35;
 
     @Test
     public void updateQualityNewVersionTest() {
         Item[] items = new Item[1];
-        items[0] = new Item(Constants.BACKSTAGE, INIT_SELL_IN, INIT_QUALITY);
+        items[0] = new Item("Other item", INIT_SELL_IN, INIT_QUALITY);
         GildedRoseInterface gildedRose = new GildedRose(items);
 
         int[] result = getResult();
@@ -24,7 +24,7 @@ public class BackstageTest {
     @Test
     public void updateQualityOldVersionTest() {
         Item[] items = new Item[1];
-        items[0] = new Item(Constants.BACKSTAGE, INIT_SELL_IN, INIT_QUALITY);
+        items[0] = new Item("Other item", INIT_SELL_IN, INIT_QUALITY);
         GildedRoseInterface gildedRose = new GildedRoseOld(items);
 
         int[] result = getResult();
@@ -34,32 +34,13 @@ public class BackstageTest {
     }
 
     private int[] getResult() {
-        int days = 0;
         int[] result = new int[MAX_DAYS];
-        result[days] = 31;
-        days++;
-        result[days] = 33;
-        days++;
-        result[days] = 35;
-        days++;
-        result[days] = 37;
-        days++;
-        result[days] = 39;
-        days++;
-        result[days] = 41;
-        days++;
-        result[days] = 44;
-        days++;
-        result[days] = 47;
-        days++;
-        result[days] = 50;
-        days++;
-        result[days] = 50;
-        days++;
-        result[days] = 50;
-        days++;
-        for (int i = days; i < MAX_DAYS; i++) {
-            result[days] = 0;
+        int days = 0;
+        for (; days < 11; days++) {
+            result[days] = INIT_QUALITY - (days + 1);
+        }
+        for (; days < 30; days++) {
+            result[days] = INIT_QUALITY - (days + 1) * 2 + 11;
         }
         return result;
     }
